@@ -1,0 +1,20 @@
+Requerimientos:
+
+1) ALMACEN: El sistema debe permitir ingresar materiales usado para la manufactura de productos terminados.
+1.1) Cada material debe tener un código numérico único
+1.2) Cada material debe tener una descripción
+1.3) Cada material debe tener un valor de stock actual (entero positivo o cero)
+1.4) Cada material debe tener un nivel de stock mínimo en el cual se realiza automáticamente un pedido de dicho material al proveedor
+1.5) Cada material debe tener una cantidad de unidades que se solicitan en un pedido de material al proveedor
+1.6) Cada material debe tener un tiempo de espera en días desde que se realiza el pedido de material al proveedor y hasta que se reciben las unidades pedidas
+
+2) PRODUCTOS: El sistema debe permitir definir aquellos productos terminados que son confeccionados con materiales del almacén
+2.1) Cada producto debe tener un código numérico único
+2.2) Cada producto debe tener una descripción
+2.3) Cada producto debe tener asociada una lista de materiales del almacén usados para confeccionar el producto terminado, incluyendo la cantidad de unidades requeridas de cada material
+2.4) Cada producto debe tener un tiempo de confección en días, el cual se cuenta a partir de disponer en el almacén de todos los materiales necesarios para su confección
+
+3) VENTAS: El sistema debe permitir realizar la venta a pedido de productos terminados
+3.1) En caso de contarse con todos los materiales necesarios en el almacén para confeccionar el producto, la fecha de entrega del producto será la fecha actual mas el tiempo de manufactura detallado en el punto #2.4
+3.2) En caso de no contarse con stock suficiente de uno o más materiales requeridos para confeccionar el producto, el sistema indicará la fecha de entrega como aquel correspondiente a la mayor espera de reposición de cada material faltante mas el tiempo de manufactura detallado en el punto #2.4
+
